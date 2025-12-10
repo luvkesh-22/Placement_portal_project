@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Placement Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Top navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="navbar-brand">🎓 Placement Portal</div>
+    </div>
+    <div class="navbar-right">
+      <span id="navUserName">Guest</span>
+      <button id="navLogoutBtn" class="btn-logout hidden" type="button">Logout</button>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <!-- Sidebar Navigation (optional, only shown after login) -->
+    <aside class="sidebar hidden" id="sidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <h4>Dashboard</h4>
+          <!-- Right now only one page, but structure ready if you add more -->
+          <a href="#" data-page="dashboard" class="nav-link active">📊 Overview</a>
+        </div>
+        <!-- Admin-specific pages (future extension) -->
+        <div class="nav-section admin-only">
+          <h4>Management</h4>
+          <a href="#" data-page="jobs" class="nav-link">💼 Jobs</a>
+          <a href="#" data-page="analytics" class="nav-link">📈 Analytics</a>
+          <a href="#" data-page="reports" class="nav-link">📋 Reports</a>
+        </div>
+        <!-- Student-specific pages (future extension) -->
+        <div class="nav-section student-only">
+          <h4>Student Hub</h4>
+          <a href="#" data-page="jobs" class="nav-link">💼 Jobs</a>
+          <a href="#" data-page="discounts" class="nav-link">🎁 Discounts</a>
+          <a href="#" data-page="profile" class="nav-link">👤 Profile</a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content" id="app">
+      <!-- JavaScript will dynamically inject:
+           - Login page
+           - Admin dashboard
+           - Student dashboard -->
+    </main>
+  </div>
+
+  <!-- Modal & Toast containers -->
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
